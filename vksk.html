@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+  <title>VKSK-Heaven for Kitchens</title>
+  <style>
+    /* Client Section  */
+
+    .h-primary {
+      text-align: center;
+      font-size: 80px;
+      padding: 3px;
+      font-family: 'Pacifico', cursive;
+
+    }
+
+    #client-section {
+      position: relative;
+      z-index: -1;
+
+    }
+
+    #clients {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #clients img {
+      height: 150px;
+    }
+
+    .client-items {
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">VKSK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Rate Us</a></li>
+              <li><a class="dropdown-item" href="#">Terms & Policy</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Support</a></li>
+              <li><a class="dropdown-item" href="#">Write for us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginmodal">login </button>
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupmodal"> Signup</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Modal  -->
+  <div class="modal fade" id="loginmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="loginmodalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginmodalLabel">Login to VKSK</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signup Modal  -->
+  <div class="modal fade" id="signupmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="signupmodalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupmodalLabel">Get your account for VKSK</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-6">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="inputname4">
+            </div>
+            <div class="col-6">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="inputname4">
+            </div>
+          </div>
+          <div class="my-2">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputconfirmPassword4" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" id="inputconfirmPassword4">
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Locality</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Pincode</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Remember me
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- carousel  -->
+
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2800">
+        <img src="https://cpimg.tistatic.com/59025/2/template_photo_1.gif" height="470" width="700" class="d-block w-100" alt="Slow Internet">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark fs-1 fw-bolder text-decoration-underline ">Welcome To VKSK_Utensils</h5>
+          <p class="text-dark">Some representative placeholder content for the first slide.</p>
+          <button class="btn btn-danger">Shopping</button>
+          <button class="btn btn-primary">Exchange</button>
+          <button class="btn btn-success">Refurbishment</button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2800">
+        <img src="https://www.ttkprestige.com/media/images/content/svachh-cooker-ttk-banner.jpg" height="500" width="700"class="d-block w-100" alt="Slow Internet">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark fs-1 fw-bolder text-decoration-underline ">The heaven for Kitchen</h5>
+          <p class="text-dark" class="text-dark">Some representative placeholder content for the second slide.</p>
+          <button class="btn btn-danger">Shopping</button>
+          <button class="btn btn-primary">Exchange</button>
+          <button class="btn btn-success">Refurbishment</button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2800">
+        <img src="https://img4.androidappsapk.co/70hNbov5T2AFlbn8kkbLMeQxdJOpi35RbNCUydKltfHSTQ0Uf2mM7a7W1hw1XkAs-gs=s500" height="500" width="500" class="d-block w-100" alt="Slow Internet">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark fs-1 fw-bolder text-decoration-underline ">Lifetime Stainless</h5>
+          <p class="text-dark">Some representative placeholder content for the third slide.</p>
+          <button class="btn btn-danger">Shopping</button>
+          <button class="btn btn-primary">Exchange</button>
+          <button class="btn btn-success">Refurbishment</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="container my-4">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Life-time Waranty</strong>
+            <h3 class="mb-0">Stainless-Steel</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+              additional content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="https://c4.wallpaperflare.com/wallpaper/4/118/544/pots-pans-chrome-cookware-wallpaper-preview.jpg"
+              width="250" height="200" alt="slow Internet">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Non-Stick</strong>
+            <h3 class="mb-0">Induction-Base</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
+              content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img
+              src="https://c0.wallpaperflare.com/preview/495/486/350/cooking-utensils-cooking-kitchenware-stainless-steel.jpg"
+              width="250" height="200" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Heavy-Gaze</strong>
+            <h3 class="mb-0">Aluminium</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+              additional content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="https://5.imimg.com/data5/VL/EW/MY-4923209/aluminium-utensils-500x500.jpg" width="250"
+              height="200" alt="slow Internet">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Original</strong>
+            <h3 class="mb-0">Copper & Brass</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
+              content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="https://i.etsystatic.com/21278904/r/il/d0d756/2475081941/il_794xN.2475081941_kd8r.jpg" width="250"
+              height="200" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid">
+    <section id="client-section">
+      <h1 class="h-primary center">We Deals In</h1>
+      <div id="clients">
+        <div class="client-items">
+          <img
+            src="data:image/png;base64,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"
+            alt="Chakmak Bartan">
+        </div>
+
+        <div class="client-items"><img src="https://upload.wikimedia.org/wikipedia/en/8/88/Hawkins_Cookers_Logo.jpg"
+            alt="Hawkins" class="img-fluid">
+        </div>
+
+        <div class="client-items"><img
+            src="https://storage.sg.content-cdn.io/in-resources/fc93a3a8-f69b-444c-8b76-9848de9338d0/Images/userimages/prestige_loader.gif"
+            alt="Prestige" class="img-fluid"></div>
+
+        <div class="client-items"><img
+            src="data:image/png;base64,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"
+            alt="Rajlaxmi"></div>
+
+        <div class="client-items"><img src="https://www.statmo.in/wp-content/uploads/2018/01/CELLO.png"
+            class="img-fluid" alt="Cello">
+        </div>
+
+        <div class="client-items"><img
+            src="https://monetindia.com/wp-content/uploads/2019/09/IMG-8659-1-e1567764131556.png" class="img-fluid"
+            alt="MOnet">
+        </div>
+
+      </div>
+  </div>
+
+  <!-- Footer  -->
+
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2020–2021 VKSK_Utensils, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
